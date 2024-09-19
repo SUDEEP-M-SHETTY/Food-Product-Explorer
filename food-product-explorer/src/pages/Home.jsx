@@ -1,26 +1,37 @@
-import React, { useContext } from 'react';
-import { ProductContext } from '../context/ProductContext';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import ProductCard from '../components/ProductCard';
 import SearchBar from '../components/SearchBar';
 import Filters from '../components/Filters';
 
 const Home = () => {
-  const { products, loading, error } = useContext(ProductContext);
+    const [products, setProducts] = useState([]);
+    const [searchQuery, setSearchQuery] = useState('');
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error fetching products: {error.message}</p>;
+    useEffect(() => {
+        const fetchProducts = async () => {
+            const response = await axios.get('https://world.openfoodfacts.org/products.json');
+            setProducts(response.data.products);
+        };
 
-  return (
-    <div>
-      <SearchBar />
-      <Filters />
-      <div className="product-list">
-        {products.map(product => (
-          <ProductCard key={product.code} product={product} />
-        ))}
-      </div>
-    </div>
-  );
+        fetchProducts();
+    }, []);
+
+    const filteredProducts = products.filter(product => 
+        product.product_name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
+    return (
+        <div>
+            <SearchBar setSearchQuery={setSearchQuery} />
+            <Filters />
+            <div className="product-list">
+                {filteredProducts.map(product => (
+                    <ProductCard key={product.id} product={product} />
+                ))}
+            </div>
+        </div>
+    );
 };
 
 export default Home;
