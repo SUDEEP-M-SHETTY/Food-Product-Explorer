@@ -16,7 +16,6 @@ Food Product Explorer is a web application that allows users to search, filter, 
 - **Front-end**: React.js or Next.js
 - **Styling**: CSS, Bootstrap, or TailwindCSS
 - **API Integration**: OpenFoodFacts API
-<!--- **State Management**: (Optional) Redux or React Context API-->
 ```
 
 ## Installation
@@ -52,7 +51,3 @@ The app utilizes the OpenFoodFacts API. For more details on the API endpoints, v
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request for any changes.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
