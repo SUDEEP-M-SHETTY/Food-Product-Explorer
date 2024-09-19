@@ -7,12 +7,9 @@ import './App.css'; // Import your styles
 const App = () => {
     return (
         <div>
+            <Navbar />
             <h1>Food Product Explorer</h1>
-            <AppRoutes /> {
-              /* Use the routes here */
-              <Navbar />
-              <Routes />
-            }
+            <AppRoutes /> {/* Use AppRoutes here */}
         </div>
     );
 };
