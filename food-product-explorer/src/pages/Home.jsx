@@ -7,6 +7,7 @@ import Filters from '../components/Filters';
 const Home = () => {
     const [products, setProducts] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
+    const [categoryFilter, setCategoryFilter] = useState('');
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -17,14 +18,18 @@ const Home = () => {
         fetchProducts();
     }, []);
 
-    const filteredProducts = products.filter(product => 
-        product.product_name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    const filteredProducts = products
+        .filter(product => 
+            product.product_name.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+        .filter(product => 
+            categoryFilter ? product.categories.includes(categoryFilter) : true
+        );
 
     return (
         <div>
             <SearchBar setSearchQuery={setSearchQuery} />
-            <Filters />
+            <Filters setCategoryFilter={setCategoryFilter} />
             <div className="product-list">
                 {filteredProducts.map(product => (
                     <ProductCard key={product.id} product={product} />
