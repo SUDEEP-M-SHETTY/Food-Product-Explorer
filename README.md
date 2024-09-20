@@ -8,7 +8,6 @@ The Food Product Explorer is a web application designed to help users search, fi
 
 ### 1. **Requirements Analysis**
    - Identified core functionalities: product listing, searching, filtering, sorting, and detailed views.
-   - Ensured the application would be responsive and user-friendly across devices.
 
 ### 2. **API Integration**
    - Familiarized myself with the OpenFoodFacts API documentation to understand available endpoints.
@@ -54,12 +53,12 @@ To set up the project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/food-product-explorer.git
+   git clone https://github.com/SUDEEP-M-SHETTY/Food-Product-Explorer.git
    ```
 
 2. **Navigate to the project directory**:
    ```bash
-   cd food-product-explorer
+   cd Food-Product-Explorer
    ```
 
 3. **Install dependencies**:
