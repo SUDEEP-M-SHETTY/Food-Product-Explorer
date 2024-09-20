@@ -97,10 +97,6 @@ The application makes use of the OpenFoodFacts API to retrieve product data. Bel
 
 Contributions are welcome! If you have suggestions for improvements or want to add features, feel free to fork the repository and submit a pull request.
 
-## License
-
-This project is licensed under the MIT License.
-
 ## Acknowledgments
 
 - [OpenFoodFacts](https://world.openfoodfacts.org/) for providing the API and extensive food database.
