@@ -107,4 +107,3 @@ This project is licensed under the MIT License.
 
 ---
 
-For any questions or issues, please open an issue in the repository or contact me directly. Happy exploring!
