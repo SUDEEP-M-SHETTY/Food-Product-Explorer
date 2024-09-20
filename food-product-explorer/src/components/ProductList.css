@@ -1,12 +1,10 @@
-/* src/components/ProductList.css */
-
 .product-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
   }
   
-  .product-card {
+.product-card {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
@@ -15,11 +13,11 @@
     transition: box-shadow 0.2s;
   }
   
-  .product-card:hover {
+.product-card:hover {
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
   }
   
-  .product-card img {
+.product-card img {
     max-width: 100%;
     height: auto;
   }
